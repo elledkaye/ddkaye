@@ -1,0 +1,94 @@
+<!-- Main navigation -->
+<header>
+   <!--Navbar-->
+   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+     <mdb-navbar-brand>
+       <a class="logo navbar-brand waves-light" mdbWavesEffect href="#"><strong>DDK</strong></a>
+     </mdb-navbar-brand>
+     <links>
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active waves-light" mdbWavesEffect>
+           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item waves-light" mdbWavesEffect>
+           <a class="nav-link" href="#">Link</a>
+         </li>
+         <li class="nav-item waves-light" mdbWavesEffect>
+           <a class="nav-link" href="#">Profile</a>
+         </li>
+       </ul>
+       <form class="form-inline">
+         <div class="md-form my-0">
+           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+         </div>
+       </form>
+     </links>
+   </mdb-navbar>
+   <!-- Full Page Intro -->
+   <div class="view jarallax">
+     <!-- Mask & flexbox options-->
+     <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+       <!-- Content -->
+       <div class="container">
+         <!--Grid row-->
+         <div class="row">
+           <!--Grid column-->
+           <div class="col-md-12 mb-4 white-text text-center">
+             <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+               data-wow-delay="0.3s"><strong>Danielle Kaye</strong></h1>
+             <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+             <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Innovative, Motivated
+                 & something something</strong></h5>
+             <a mdbBtn color="white" outline="true" mdbWavesEffect class="wow fadeInDown" data-wow-delay="0.4s" disabled>portfolio</a>
+             <a mdbBtn color="white" outline="true" mdbWavesEffect class="wow fadeInDown" data-wow-delay="0.4s" disabled>About me</a> 
+             <a mdbBtn color="white" (click)="requestModal.show()" outline="true" mdbWavesEffect class="wow fadeInDown" data-wow-delay="0.4s">Request Password</a> 
+             <div mdbModal #requestModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="requestPassword" aria-hidden="true"> 
+                <div class="modal-dialog" role="document"> 
+                   <div class="modal-content"> 
+                      <div class="modal-header"> 
+                         <button type="button" class="close pull-right" aria-label="close" (click)="requestModal.hide()"> 
+                            <span aria-hidden="true">x</span>
+                         </button> 
+                         <h4 class="modal-title" style="color: black">Password Request</h4>
+                      </div>  
+                      <div class="modal-boody"> 
+                         <form (ngSubmit)="processForm()">
+                      <div class="md-form"> 
+                      <input 
+                      mdbInput 
+                      type="email" 
+                      id="userEmail" 
+                      formControlname="email" 
+                      name="email" 
+                      class="form-control" 
+                      [(ngModel)]="email" 
+                      required minlength="3" 
+                      #emailInput ="ngModel">  
+                      <label for="userEmail" >Enter Email</label>
+                      <mdb-error *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">Error</mdb-error> 
+                      <mdb-success *ngIf="emailInput.valid && (emailInput.dirty || emailInput.touched)">Valid</mdb-success>
+                     </div>
+                     </form>
+                  </div>
+                  <div class="modal-footer">
+                        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="requestModal.hide()" mdbWavesEffect>Close</button>
+                        <button type="button" mdbBtn color="primary" class="relative waves-light" (click)="processForm()" mdbWavesEffect>Submit</button>
+                      </div>
+                   </div>
+                </div>
+             </div> 
+             <p>To get access to full portfolio request password</p>
+           </div>
+           <!--Grid column-->
+         </div>
+         <!--Grid row-->
+       </div>
+       <!-- Content -->
+     </div>
+     <!-- Mask & flexbox options-->
+   </div>
+   <!-- Full Page Intro -->
+ </header>
+ <!-- Main navigation -->
+ Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam qui ipsam itaque officiis ipsum et recusandae
+ voluptatem tenetur. Quibusdam dolorem in totam quis necessitatibus blanditiis mollitia, inventore rem recusandae quo?c
